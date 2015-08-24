@@ -1,0 +1,13 @@
+{
+  "generator-ng-plugin": {
+    "authorName": "Tine Kondo",
+    "githubUsername": "tinesoft",
+    "projectName": "ng-juxtapose",
+    "projectVersion": "0.0.1",
+    "projectDescription": "AngularJS directive for Juxtapose JS (https://juxtapose.knightlab.com/): a side-by-side image comparison library.",
+    "angularVersion": ">=1.0.8",
+    "ngModuleName": "ngJuxtapose",
+    "ngDirectiveName": "juxtapose",
+    "mainColor": "#0f9bd1"
+  }
+}

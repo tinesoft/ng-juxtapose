@@ -1,0 +1,56 @@
+{
+  "name": "ng-juxtapose",
+  "version": "0.0.1",
+  "description": "AngularJS directive for JuxtaposeJS, a JavaScript library for making before/after image sliders.",
+  "homepage": "http://github.com/tinesoft/ng-juxtapose",
+  "authors": [
+    {"name": "Tine Kondo", "url": "http://github.com/tinesoft"}
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tinesoft/ng-juxtapose.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "juxtapose",
+    "compare",
+    "images",
+    "slider",
+    "before",
+    "after"
+  ],
+  "main": [
+    "dist/ng-juxtapose.js",
+    "dist/ng-juxtapose.min.js",
+    "dist/ng-juxtapose.min.js.map"
+  ],
+  "ignore": [
+    "src",
+    "demo",
+    ".bowerrc",
+    ".gitignore",
+    ".travis.yml",
+    "bower.json",
+    "Gruntfile.js",
+    "build.config.js",
+    "karma-unit.tpl.js",
+    "changelog.tpl",
+    "package.json",
+    "module.prefix",
+    "module.suffix",
+    "LICENSE",
+    "README.md"
+  ],
+  "dependencies": {
+    "angular": ">=1.2",
+    "juxtapose": "~1.1"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.3",
+    "angular-mocks": ">=1.2",
+    "angular-bootstrap": "~0.13",
+    "google-code-prettify": "~1.0.3",
+    "jasmine-jquery": "~2.1.0"
+  }
+}

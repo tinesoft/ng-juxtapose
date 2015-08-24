@@ -1,0 +1,47 @@
+{
+  "name": "ng-juxtapose",
+  "version": "0.0.1",
+  "description": "AngularJS directive for JuxtaposeJS, a JavaScript library for making before/after image sliders.",
+  "filename": "./src/ng-juxtapose.js",
+  "homepage": "http://github.com/tinesoft/ng-juxtapose",
+  "author": {
+    "name": "Tine Kondo",
+    "url": "http://github.com/tinesoft"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tinesoft/ng-juxtapose.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "juxtapose",
+    "compare",
+    "images",
+    "slider",
+    "before",
+    "after"
+  ],
+  "bugs": {
+    "url": "http://github.com/tinesoft/ng-juxtapose/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-conventional-changelog": "latest",
+    "grunt-karma": "latest",
+    "grunt-ng-annotate": "latest",
+    "grunt-bump": "latest",
+    "grunt-build-control": "latest",
+    "karma": "latest",
+    "karma-jasmine": "latest",
+    "karma-phantomjs-launcher": "latest"
+  }
+}
