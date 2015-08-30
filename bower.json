@@ -1,6 +1,6 @@
 {
   "name": "ng-juxtapose",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "AngularJS directive for JuxtaposeJS, a JavaScript library for making before/after image sliders.",
   "homepage": "http://github.com/tinesoft/ng-juxtapose",
   "authors": [
