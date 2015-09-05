@@ -1,10 +1,43 @@
 angular.module('ngJuxtapose', [])
-	.constant('juxtaposeConfig', {
-		startingPosition: '50%',
-		showLabels : true,
-		showCredits: true,
-		animate : true,
-		vertical : false
+	.provider('juxtaposeConfig', function(){
+
+		//the default options
+		var defaultConfig = {
+			startingPosition: '50%',
+			showLabels : true,
+			showCredits: true,
+			animate : true,
+			vertical : false
+		};
+
+		var config = angular.extend({}, defaultConfig);
+
+		return {
+			setStartingPosition : function(value){
+				config.startingPosition = value;
+			},
+			setShowLabels : function(value){
+				config.showLabels = value;
+			},
+			setShowCredits : function(value){
+				config.showCredits = value;
+			},
+			setAnimate : function(value){
+				config.animate = value;
+			},
+			setVertical : function(value){
+				config.vertical = value;
+			},
+			$get: function(){
+				return {
+					startingPosition: '50%',
+					showLabels : true,
+					showCredits: true,
+					animate : true,
+					vertical : false
+				};
+			}
+		};
 	})
 	.controller('JuxtaposeController', ['$scope', '$attrs', '$parse', '$window', 'juxtaposeConfig',  function($scope, $attrs, $parse,  $window, juxtaposeConfig){
 
@@ -87,8 +120,13 @@ angular.module('ngJuxtapose', [])
 			if($attrs.beforeImageAlt || $attrs.afterImageAlt){
 				var imgElements = self.$element.find('img');
 
-				angular.element(imgElements[0]).attr('alt', $scope.beforeImageAlt);
-				angular.element(imgElements[1]).attr('alt', $scope.afterImageAlt);
+				var children =  self.$element.children();
+				var $jxSlider =  self.$element.children().eq(0);
+				var $jxImageLeft = $jxSlider.children().eq(1);
+				var $jxImageRight = $jxSlider.children().eq(2);
+
+				angular.element($jxImageLeft.eq(0)[0]).attr('alt', $scope.beforeImageAlt);
+				angular.element($jxImageRight.eq(0)[0]).attr('alt', $scope.afterImageAlt);
 			}
 		};
 
