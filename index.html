@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<html lang="" ng-app="ngBrowserUpdateDemo">
+<html lang="" ng-app="ngJuxtaposeDemo">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@tinesoft">
-        <meta name="twitter:title" content="ngBrowserUpdate">
-        <meta name="twitter:description" content="AngularJS directive for Browser-Update.org (http://browser-update.org): out-dated browsers notifier">
-        <meta name="twitter:creator" content="@tinesoft">
-        <!--<meta name="twitter:image:src" content="">-->
-        <meta property="og:title" content="ngBrowserUpdate" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://tinesoft.github.io/ng-borwser-update" />
-        <!--<meta property="og:image" content="" />-->
-        <meta property="og:description" content="AngularJS directive for Browser-Update.org (http://browser-update.org): out-dated browsers notifier">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>ngBrowserUpdate Directive Demo</title>
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@tinesoft">
+		<meta name="twitter:title" content="ngJuxtapose">
+		<meta name="twitter:description" content="AngularJS directive for JuxtaposeJS, a JavaScript library for making before/after image sliders.">
+		<meta name="twitter:creator" content="@tinesoft">
+		<!--<meta name="twitter:image:src" content="">-->
+		<meta property="og:title" content="ngJuxtapose" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://tinesoft.github.io/ng-juxtapose" />
+		<!--<meta property="og:image" content="" />-->
+		<meta property="og:description" content="AngularJS directive for JuxtaposeJS, a JavaScript library for making before/after image sliders.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ngJuxtapose Directive Demo</title>
 
-        <!-- font awesome from BootstrapCDN -->
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-        <!-- compiled CSS -->
-        <link rel="stylesheet" type="text/css" href="bower_components/google-code-prettify/src/prettify.css" />
-        
-        <link rel="stylesheet" type="text/css" href="assets/ng-browser-update-demo.css" />
-        
-        <!-- compiled JavaScript -->
-        <script type="text/javascript" src="assets/ng-browser-update-demo.js"></script>
+		<!-- font awesome from BootstrapCDN -->
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<!-- compiled CSS -->
+		<link rel="stylesheet" type="text/css" href="bower_components/google-code-prettify/src/prettify.css" />
+		
+		<link rel="stylesheet" type="text/css" href="bower_components/juxtapose/build/css/juxtapose.css" />
+		
+		<link rel="stylesheet" type="text/css" href="assets/ng-juxtapose-demo.css" />
+		
+		<!-- compiled JavaScript -->
+		<script type="text/javascript" src="assets/ng-juxtapose-demo.js"></script>
 
-        
+		
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,293 +41,918 @@
 	<body>
 
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-	      <div class="navbar-inner">
-	        <div class="container">
-	          <div class="navbar-header">
-	          </div>
-	          <ul class="nav navbar-nav">
-	            <li>
-	              <a href="#" class="navbar-brand">ngBrowserUpdate</a>
-	                <small>
-		              <a href="http://github.com/tinesoft/ng-browser-update/blob/v1.1.0/CHANGELOG.md">
-		                v1.1.0
-		              </a>
-		            </small>
-	            </li>
-	          </ul>
-	        </div>
-	      </div>
+		  <div class="navbar-inner">
+			<div class="container">
+			  <div class="navbar-header">
+			  </div>
+			  <ul class="nav navbar-nav">
+				<li>
+				  <a href="#" class="navbar-brand">ngJuxtapose</a>
+					<small>
+					  <a href="http://github.com/tinesoft/ng-juxtapose/blob/v1.0.2/CHANGELOG.md">
+						v1.0.2
+					  </a>
+					</small>
+				</li>
+			  </ul>
+			</div>
+		  </div>
 		</nav>
 
 		<header>
 			<div class="jumbotron">
 				<div class="container">
-					<h1>ngBrowserUpdate</h1>
-					<p>AngularJS directive for <a href="https://browser-update.org"  target="_blank">Browser-Update.org</a>,
-					   a service that  unobtrusively informs your visitors to switch to a newer browser when browsing with an outdated one.
+					<h1>ngJuxtapose</h1>
+					<p>AngularJS directive for <a href="https://juxtapose.knightlab.com/">JuxtaposeJS</a>, a JavaScript library for making before/after image sliders.
 					</p>
-				    <p>
-				    	<a class="btn btn-outline-inverse btn-lg" href="https://browser-update.org"  target="_blank">
-				    		<i class="fa fa-info fa-lg"></i> Learn More
-				    	</a>
-						<a class="btn btn-outline-inverse btn-lg" href="https://github.com/tinesoft/ng-browser-update" target="_blank">
+					<p>
+						<a class="btn btn-outline-inverse btn-lg" href="https://juxtapose.knightlab.com/">
+							<i class="fa fa-info fa-lg"></i> Learn More
+						</a>
+						<a class="btn btn-outline-inverse btn-lg" href="https://github.com/tinesoft/ng-juxtapose">
 							<i class="fa fa-github fa-lg"></i> Code on Github
 						</a>
-						<a class="btn btn-outline-inverse btn-lg" href="https://github.com/tinesoft/ng-browser-update/releases/tag/v1.1.0">
-							<i class="fa fa-download fa-lg"></i> Download <small>(1.1.0)</small>
+						<a class="btn btn-outline-inverse btn-lg" href="https://github.com/tinesoft/ng-juxtapose/releases/tag/v1.0.2">
+							<i class="fa fa-download fa-lg"></i> Download <small>(1.0.2)</small>
 						</a>
-				    </p>
+					</p>
 				</div>
 			</div>
 		</header>
 
-		<section  ng-controller="PlunkerCtrl" ng-init="vendor_js=['https://rawgithub.com/tinesoft/ng-browser-update/master/src/ng-browser-update.js'];" >
-			<div class="container">
-				<div class="row">
-				    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 page-header">
-		                <h1>Minimal code</h1>        
-		            </div>
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
-						<p>Simplest usage possible! Just add the directive in your html page (preferably, just below the <code>&lt;body&gt;</code> tag).</p>						
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right" ng-controller="PlunkerCtrl"
-		                 ng-init=
-		               		"vendor_js=['https://rawgithub.com/tinesoft/ng-browser-update/master/src/ng-browser-update.js'];" >
-		             
-		              <div class="pull-right">
-		                <button class="btn btn-info" ng-click="edit('1.0.7', 'ngBrowserUpdate', 'ng-browser-update')">
-						  	<i class="fa fa-eye"></i> See / 
-		                	<i class="fa fa-edit"></i> Edit in plunker
-		                </button>
-		              </div>
-		              <tabset>
-		                <tab heading="Markup">
-		                  <div plunker-content="markup">
-		                      <pre class="prettyprint">
-&lt;browser-update&gt;&lt;/browser-update&gt;
-		                      </pre>
-		                  </div>
-		                </tab>
-		              </tabset>
-		            </div>
-		            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		            	<p>This displays a notification bar that looks like this:</p>
-		            	<img src="assets/notif-sample.png" class="img-responsive" alt="Sample of the Notification Bar">
-		            </div>
-		            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 callout callout-warning">
-		            	<p><strong>Note:</strong> With the minimal code, you will only see the notification bar if you are actually browsing with an outdated browser.</p>
-		            </div>
-
-				</div>
-			</div>
-		</section>
-
-		<section ng-controller="PlunkerCtrl" ng-init="vendor_js=['https://rawgithub.com/tinesoft/ng-browser-update/master/src/ng-browser-update.js'];" >
+		<section id="minimal_code" >
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 page-header">
-		                <h1>With Options</h1>        
-		            </div>
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
-						<p>A little more complete usage, with some options given via <b>hardcoded values</b>.</p>						
+						<h1>Minimal code</h1>        
 					</div>
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right">
-		             
-		              <div class="pull-right">
-		                <button class="btn btn-info" ng-click="edit('1.0.7', 'ngBrowserUpdate', 'ng-browser-update')">
-						  	<i class="fa fa-eye"></i> See / 
-		                	<i class="fa fa-edit"></i> Edit in plunker
-		                </button>
-		              </div>
-		              <tabset>
-		                <tab heading="Markup">
-		                  <div plunker-content="markup">
-		                      <pre class="prettyprint">
-&lt;browser-update  
-   versions="{i:8,f:8,o:9.63,s:2,c:8}" reminder="1"
-   always-show-bar="true" new-window="false" 
-   notification-text="This is my custom message"&gt;
-&lt;/browser-update&gt;
-		                      </pre>
-		                  </div>
-		                </tab>
-		              </tabset>
-		            </div>
-		            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 callout callout-info">
-		                <p>The following options are available:</p>
-		                <ul>
-							<li><b>versions</b> : browser versions to notify</li>
-							<li><b>language</b> : set a language for the message, e.g. "en", overrides the default detection</li>
-							<li><b>reminder</b> : atfer how many hours should the message reappear: 0 = show all the time</li>
-							<li><b>new-window</b>: open link in new window/tab</li>
-							<li><b>always-show-bar</b>:  always show the bar (for testing)</li>
-							<li><b>notification-text</b> : custom notification html text (takes precedence over the 'language' option)</li>
-							<li><b>on-notification-bar-shown</b>: callback function after the bar has appeared</li>
-							<li><b>on-notificationBar-clicked</b>: callback function if bar was clicked</li>
-		                </ul>    
-		            </div>
+
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
+						<p>Simplest usage possible! Just add the directive in your html page.</p>
+
+						<juxtapose
+							before-image-url="'assets/LIONDOORA.jpg'" 
+							after-image-url="'assets/LIONDOOR_2A.jpg'">
+						</juxtapose>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right" ng-controller="PlunkerCtrl"
+						ng-init="vendor_css=['https://rawgit.com/NUKnightLab/juxtapose/1.1.3/juxtapose/css/juxtapose.css'];
+						vendor_js=['https://rawgit.com/NUKnightLab/juxtapose/1.1.3/juxtapose/js/juxtapose.js', 'https://rawgit.com/tinesoft/ng-juxtapose/master/src/ng-juxtapose.js'];" >
+					 
+					  <div class="pull-right">
+						<button class="btn btn-info" ng-click="edit('1.2.28', 'ngJuxtapose', 'ng-juxtapose')">
+							<i class="fa fa-eye"></i> See / 
+							<i class="fa fa-edit"></i> Edit in plunker
+						</button>
+					  </div>
+					  <tabset>
+						<tab heading="Markup">
+						  <div plunker-content="markup">
+							  <pre class="prettyprint">
+&lt;juxtapose
+  before-image-url="'http://online.wsj.com/media/LIONDOORA.jpg'" 
+  after-image-url="'http://online.wsj.com/media/LIONDOOR_2A.jpg'"&gt;
+&lt;/juxtapose&gt;
+							  </pre>
+						  </div>
+						</tab>
+					  </tabset>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 callout callout-info">
+						The <b>before image</b> refers to the image on the left (resp. on top) in case of <b>vertical</b> (resp. <b>horizontal</b>) orientation.
+						<br/>
+						The <b>after image</b> refers to the image on the right (resp. at the bottom) in case of <b>vertical</b> (resp. <b>horizontal</b>) orientation.
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<section ng-controller="PlunkerCtrl" 
-		ng-init="
-		content.javascript= 'app.controller(\'MyCtrl\', [\'$scope\',\'$window\', function ($scope, $window) {\n'+
-			'	$scope.versions = {i:8,f:8,o:9.63,s:2,c:8};\n'+
-			'	$scope.language = \'it\';\n'+
-			'	$scope.reminder = 1;\n'+
-			'	$scope.newWindow= true;\n'+
-			'	$scope.alwaysShowBar= true;\n'+
+		<section id="with_attrs_options">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 page-header">
+						<h1>With Options</h1>        
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
+						<p>A little more complete usage, with some options given via <b>hardcoded values</b>.</p>
 
-			'	//callback functions\n'+
-			'	$scope.onNotificationBarShown= function(data){};\n'+
-			'	$scope.onNotificationBarClicked= function(data){ $window.alert(\'Notification bar clicked!\');};\n'+
-			'}]);';
-		vendor_js=['https://rawgithub.com/tinesoft/ng-browser-update/master/src/ng-browser-update.js'];" >
+						<juxtapose 
+						  before-image-url="'assets/LIONDOORA.jpg'" 
+						  before-image-label="'Maidan square in 2009'" 
+						  before-image-credit="'WSJ'"
+
+						  after-image-url="'assets/LIONDOOR_2A.jpg'" 
+						  after-image-label="'Maidan square in 2014'" 
+						  after-image-credit="">
+						</juxtapose>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right" ng-controller="PlunkerCtrl"
+					ng-init="vendor_css=['https://rawgit.com/NUKnightLab/juxtapose/1.1.3/juxtapose/css/juxtapose.css'];
+					vendor_js=['https://rawgit.com/NUKnightLab/juxtapose/1.1.3/juxtapose/js/juxtapose.js','https://rawgit.com/tinesoft/ng-juxtapose/master/src/ng-juxtapose.js'];">
+					 
+					  <div class="pull-right">
+						<button class="btn btn-info" ng-click="edit('1.2.28', 'ngJuxtapose', 'ng-juxtapose')">
+							<i class="fa fa-eye"></i> See / 
+							<i class="fa fa-edit"></i> Edit in plunker
+						</button>
+					  </div>
+					  <tabset>
+						<tab heading="Markup">
+						  <div plunker-content="markup">
+							  <pre class="prettyprint">
+&lt;juxtapose 
+  before-image-url="'http://online.wsj.com/media/LIONDOORA.jpg'" 
+  before-image-label="'Maidan square in 2009'" 
+  before-image-credit="'WSJ'"
+
+  after-image-url="'http://online.wsj.com/media/LIONDOOR_2A.jpg'" 
+  after-image-label="'Maidan square in 2014'" 
+  after-image-credit=""&gt;
+&lt;/juxtapose&gt;
+							  </pre>
+						  </div>
+						</tab>
+					  </tabset>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 callout callout-info">
+						<p>The following options are available <b>on the directive element</b>, and directly affect the two images:</p>
+						<ul>
+							<li><b>before-image-url</b> : the URL to the before image</li>
+							<li><b>before-image-label</b> : the label of the before image (displayed on top of the image)</li>
+							<li><b>before-image-credit</b> : the credit for the before image (displayed as overlay, below the 2 images)</li>
+							<li><b>before-image-alt</b> : the alternate  text  (<code>alt</code>) for the before image</li>
+
+							<li><b>after-image-url</b> : the URL to the after image</li>
+							<li><b>after-image-label</b> : the label of the after image (displayed as overlay, on top of the image)</li>
+							<li><b>after-image-credit</b> : the credit for the after image (displayed below the 2 images)</li>
+							<li><b>after-image-alt</b> : the alternate  text  (<code>alt</code>) for the after image</li>
+
+						</ul>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 callout callout-info">
+						<p>The following options are available <b>on both the directive element and as config parameters</b> (see <a href="https://github.com/tinesoft/ng-juxtapose#config-options">juxtaposeConfigProvider</a>), and globally affect the slider itself:</p>
+						<ul>
+							<li><b>starting-position</b> : the slider start position (default is <code>50%</code>, at the middle of the two images)</li>
+							<li><b>show-labels</b> : indicates if image labels must be displayed. You must have labels for both images, or they won't be shown, even if <code>true</code> is set (default value)</li>
+							<li><b>show-credits</b> : indicates if image credits must be displayed. You must have credits for both images, or they won't be shown, even if <code>true</code> is set (default value)</li>
+							<li><b>animate</b> : If <code>true</code>, the divider will glide to the point where someone clicks; otherwise, it will jump (default is <code>true</code>)</li>
+							<li><b>vertical</b> : If <code>true</code>, the divider will move vertically instead of horizontally (default is <code>true</code>)</li>
+						</ul>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 callout callout-warning">
+						<p>When config options are defined as attributes, they <strong>take precedence over values defined via the <a href="https://github.com/tinesoft/ng-juxtapose#config-options">juxtaposeConfigProvider</a></strong></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="with_scope_options">
 			<div class="container">
 				<div class="row">
 		
-		            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
-						<p>Another usage, with some options given via <b>scope values</b>.</p>						
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right">
-		             
-		              <div class="pull-right">
-		                <button class="btn btn-info" ng-click="edit('1.0.7', 'ngBrowserUpdate', 'ng-browser-update')">
-						  	<i class="fa fa-eye"></i> See / 
-		                	<i class="fa fa-edit"></i> Edit in plunker
-		                </button>
-		              </div>
-		              <tabset>
-		                <tab heading="Markup">
-		                  <div plunker-content="markup">
-		                      <pre class="prettyprint">
-&lt;div  ng-controller="MyCtrl"&gt;
-   &lt;browser-update
-    versions="versions" reminder="reminder"
-    new-window="newWindow" 
-    always-show-bar="alwaysShowBar" 
-    on-notification-bar-shown="onNotificationBarShown(null)"
-    on-notification-bar-clicked="onNotificationBarClicked(null)"&gt;
-   &lt;/browser-update&gt;
-&lt;/div&gt;
-		                      </pre>
-		                  </div>
-		                </tab>
-		            	<tab heading="MyCtrl">
-		                  <div>
-		                      <pre class="prettyprint">
-&lt;script &gt;
-angular.module('demoApp', [])
-.controller('MyCtrl', ['$scope', '$window', 
- function ($scope, $window) {
-  $scope.versions = {i:8,f:8,o:9.63,s:2,c:8};					
-  $scope.language = 'it';					
-  $scope.reminder = 1;				
-  $scope.newWindow= true;					
-  $scope.alwaysShowBar= true;	
-  		
-  //callback functions
-  $scope.onNotificationBarShown= function(data){};
-  $scope.onNotificationBarClicked= function(data){ 
-  	$window.alert('Notification bar clicked!');};
-}]);
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left" ng-controller="MyCtrl">
+						<p>Another usage, with some options given via <b>scope values</b>.</p>
 
-&lt;/script&gt;
-		                      </pre>
-		                  </div>
-		                </tab>
-		              </tabset>
-		            </div>
+						<juxtapose
+							before-image-url="options.beforeImageUrl" 
+							before-image-label="options.beforeImageLabel" 
+							before-image-credit="options.beforeImageCredit"
+							before-image-alt="options.beforeImageAlt"
+
+							after-image-url="options.afterImageUrl" 
+							after-image-label="options.afterImageLabel" 
+							after-image-credit="options.afterImageCredit"
+							after-image-alt="options.afterImageAlt">
+						</juxtapose>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right" ng-controller="PlunkerCtrl"
+					ng-init="vendor_css=['https://rawgit.com/NUKnightLab/juxtapose/1.1.3/juxtapose/css/juxtapose.css'];
+					vendor_js=['https://rawgit.com/NUKnightLab/juxtapose/1.1.3/juxtapose/js/juxtapose.js', 'https://rawgit.com/tinesoft/ng-juxtapose/master/src/ng-juxtapose.js'];" >
+					 
+					  <div class="pull-right">
+						<button class="btn btn-info" ng-click="edit('1.2.28', 'ngJuxtapose', 'ng-juxtapose')">
+							<i class="fa fa-eye"></i> See / 
+							<i class="fa fa-edit"></i> Edit in plunker
+						</button>
+					  </div>
+					  <tabset>
+						<tab heading="Markup">
+						  <div plunker-content="markup">
+							  <pre class="prettyprint">
+&lt;div ng-controller="MyCtrl"&gt;
+  &lt;juxtapose
+	before-image-url="options.beforeImageUrl"
+	before-image-label="options.beforeImageLabel"
+	before-image-credit="options.beforeImageCredit"
+	before-image-alt="options.beforeImageAlt"
+
+	after-image-url="options.afterImageUrl"
+	after-image-label="options.afterImageLabel"
+	after-image-credit="options.afterImageCredit"
+	after-image-alt="options.afterImageAlt"&gt;
+  &lt;/juxtapose&gt;
+&lt;/div&gt;
+							  </pre>
+						  </div>
+						</tab>
+						<tab heading="JavaScript">
+						  <div plunker-content="javascript">
+							  <pre class="prettyprint">
+angular.module('ngJuxtaposeDemo').controller('MyCtrl', ['$scope',  function ($scope) {
+  $scope.options = {};
+  $scope.options.beforeImageUrl = 'http://online.wsj.com/media/LIONDOORA.jpg';
+  $scope.options.beforeImageLabel = '2009';
+  $scope.options.beforeImageCredit = 'WSJ';
+  $scope.options.beforeImageAlt = '2009 Alternate text';
+
+  $scope.options.afterImageUrl = 'http://online.wsj.com/media/LIONDOOR_2A.jpg';
+  $scope.options.afterImageLabel = '2014';
+  $scope.options.afterImageCredit = 'TKO';
+  $scope.options.afterImageAlt = '2014 Alternate text';
+
+}]);
+							  </pre>
+						  </div>
+						</tab>
+					  </tabset>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<section ng-controller="PlunkerCtrl" ng-init="vendor_js=['https://rawgithub.com/tinesoft/ng-browser-update/master/src/ng-browser-update.js'];" >
+		<section id="holy_grail">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 page-header">
-		                <h1>CSS Customization</h1>      
-		            </div>
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<p>If you're not happy with the default style, <a href="http://browser-update.org/en/customize.html" target="_blank">Browser-Update.org</a>
-						let you customize the appearance of the notification bar via those css-rules.
-						</p>					
+						<h1>Holy Grail Demo</h1>      
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="HolyGrailCtrl">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
+								<juxtapose
+									starting-position="options.startingPosition"
+									show-labels="options.showLabels"
+									show-credits="options.showCredits"
+									animate="options.animate"
+									vertical="options.vertical"
+
+									before-image-url="options.beforeImageUrl" 
+									before-image-label="options.beforeImageLabel" 
+									before-image-credit="options.beforeImageCredit"
+									before-image-alt="options.beforeImageAlt"
+
+									after-image-url="options.afterImageUrl" 
+									after-image-label="options.afterImageLabel" 
+									after-image-credit="options.afterImageCredit"
+									after-image-alt="options.afterImageAlt">
+								</juxtapose>								
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right">
+								<form  name="optionsForm" role="form" class="form-horizontal" novalidate>
+									<fieldset>
+										<div class="form-group">
+											<strong>Before Image:</strong>
+										</div>
+
+										<div class="form-group" ng-class="{'has-error': optionsForm.beforeImageUrl.$error.required}">
+											<input type="text" class="form-control" name="beforeImageUrl" ng-model="options.beforeImageUrl" placeholder="URL (mandatory)" required>
+										</div>
+									
+										<div class="form-group">
+											<div class="row">
+												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+													<input type="text" class="form-control" ng-model="options.beforeImageLabel" placeholder="Label (optional)">
+												</div>
+												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+													<input type="text" class="form-control" ng-model="options.beforeImageCredit" placeholder="Credit (optional)">
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<input type="text" class="form-control" ng-model="options.beforeImageAlt" placeholder="Alternate Text (optional)" required>
+										</div>
+									</fieldset>
+
+									<fieldset>
+										<div class="form-group">
+											<strong>After Image:</strong>
+										</div>
+										
+										<div class="form-group" ng-class="{'has-error': optionsForm.afterImageUrl.$error.required}">
+											<input type="text" class="form-control" name="afterImageUrl" ng-model="options.afterImageUrl" placeholder="URL (mandatory)" required>
+										</div>
+									
+										<div class="form-group">
+											<div class="row">
+												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+													<input type="text" class="form-control" ng-model="options.afterImageLabel" placeholder="Label (optional)">
+												</div>
+												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+													<input type="text" class="form-control" ng-model="options.afterImageCredit" placeholder="Credit (optional)">
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<input type="text" class="form-control" ng-model="options.afterImageAlt" placeholder="Alternate Text (optional)" required>
+										</div>
+									</fieldset>
+
+									<fieldset>
+										<div class="row">
+											<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+												<div class="checkbox-inline">
+													<label>
+														<input type="checkbox" ng-model="options.showLabels">
+														Show Labels ?
+													</label>
+												</div>
+
+												<div class="checkbox-inline">
+													<label>
+														<input type="checkbox" ng-model="options.showCredits">
+														Show Credits ?
+													</label>
+												</div>
+								
+												<div class="checkbox-inline">
+													<label>
+														<input type="checkbox" ng-model="options.animate">
+														Animate Slider ?
+													</label>
+												</div>
+
+												<div class="checkbox-inline">
+													<label>
+														<input type="checkbox" ng-model="options.vertical">
+														Vertical Slider ?
+													</label>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="PlunkerCtrl" 
+					ng-init="vendor_css=['https://rawgit.com/NUKnightLab/juxtapose/1.1.3/juxtapose/css/juxtapose.css'];
+					vendor_js=['https://rawgit.com/NUKnightLab/juxtapose/1.1.3/juxtapose/js/juxtapose.js', 'https://rawgit.com/tinesoft/ng-juxtapose/master/src/ng-juxtapose.js'];" >
+					 
+					  <div class="pull-right">
+						<button class="btn btn-info" ng-click="edit('1.2.28', 'ngJuxtapose', 'ng-juxtapose')">
+							<i class="fa fa-eye"></i> See / 
+							<i class="fa fa-edit"></i> Edit in plunker
+						</button>
+					  </div>
+					  <tabset>
+						<tab heading="Markup">
+						  <div plunker-content="markup">
+							  <pre class="prettyprint">
+&lt;div  ng-controller="HolyGrailCtrl"&gt;
+  &lt;juxtapose
+	starting-position="options.startingPosition"
+	show-labels="options.showLabels"
+	show-credits="options.showCredits"
+	animate="options.animate"
+	vertical="options.vertical"
+
+	before-image-url="options.beforeImageUrl"
+	before-image-label="options.beforeImageLabel"
+	before-image-credit="options.beforeImageCredit"
+	before-image-alt="options.beforeImageAlt"
+
+	after-image-url="options.afterImageUrl"
+	after-image-label="options.afterImageLabel"
+	after-image-credit="options.afterImageCredit"
+	after-image-alt="options.afterImageAlt"&gt;
+  &lt;/juxtapose&gt;
+
+  &lt;h1&gt;Options&lt;/h1&gt;
+  
+  &lt;form  name=&quot;optionsForm&quot; role=&quot;form&quot; class=&quot;form-horizontal&quot; novalidate&gt;
+  	&lt;fieldset&gt;
+  		&lt;div class=&quot;form-group&quot;&gt;
+  			&lt;strong&gt;Before Image:&lt;/strong&gt;
+  		&lt;/div&gt;
+
+  		&lt;div class=&quot;form-group&quot; ng-class=&quot;{'has-error': optionsForm.beforeImageUrl.$error.required}&quot;&gt;
+  			&lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;beforeImageUrl&quot; ng-model=&quot;options.beforeImageUrl&quot; placeholder=&quot;URL (mandatory)&quot; required&gt;
+  		&lt;/div&gt;
+  	
+  		&lt;div class=&quot;form-group&quot;&gt;
+  			&lt;div class=&quot;row&quot;&gt;
+  				&lt;div class=&quot;col-xs-12 col-sm-6 col-md-6 col-lg-6&quot;&gt;
+  					&lt;input type=&quot;text&quot; class=&quot;form-control&quot; ng-model=&quot;options.beforeImageLabel&quot; placeholder=&quot;Label (optional)&quot;&gt;
+  				&lt;/div&gt;
+  				&lt;div class=&quot;col-xs-12 col-sm-6 col-md-6 col-lg-6&quot;&gt;
+  					&lt;input type=&quot;text&quot; class=&quot;form-control&quot; ng-model=&quot;options.beforeImageCredit&quot; placeholder=&quot;Credit (optional)&quot;&gt;
+  				&lt;/div&gt;
+  			&lt;/div&gt;
+  		&lt;/div&gt;
+
+  		&lt;div class=&quot;form-group&quot;&gt;
+  			&lt;input type=&quot;text&quot; class=&quot;form-control&quot; ng-model=&quot;options.beforeImageAlt&quot; placeholder=&quot;Alternate Text (optional)&quot; required&gt;
+  		&lt;/div&gt;
+  	&lt;/fieldset&gt;
+
+  	&lt;fieldset&gt;
+  		&lt;div class=&quot;form-group&quot;&gt;
+  			&lt;strong&gt;After Image:&lt;/strong&gt;
+  		&lt;/div&gt;
+  		
+  		&lt;div class=&quot;form-group&quot; ng-class=&quot;{'has-error': optionsForm.afterImageUrl.$error.required}&quot;&gt;
+  			&lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;afterImageUrl&quot; ng-model=&quot;options.afterImageUrl&quot; placeholder=&quot;URL (mandatory)&quot; required&gt;
+  		&lt;/div&gt;
+  	
+  		&lt;div class=&quot;form-group&quot;&gt;
+  			&lt;div class=&quot;row&quot;&gt;
+  				&lt;div class=&quot;col-xs-12 col-sm-6 col-md-6 col-lg-6&quot;&gt;
+  					&lt;input type=&quot;text&quot; class=&quot;form-control&quot; ng-model=&quot;options.afterImageLabel&quot; placeholder=&quot;Label (optional)&quot;&gt;
+  				&lt;/div&gt;
+  				&lt;div class=&quot;col-xs-12 col-sm-6 col-md-6 col-lg-6&quot;&gt;
+  					&lt;input type=&quot;text&quot; class=&quot;form-control&quot; ng-model=&quot;options.afterImageCredit&quot; placeholder=&quot;Credit (optional)&quot;&gt;
+  				&lt;/div&gt;
+  			&lt;/div&gt;
+  		&lt;/div&gt;
+
+  		&lt;div class=&quot;form-group&quot;&gt;
+  			&lt;input type=&quot;text&quot; class=&quot;form-control&quot; ng-model=&quot;options.afterImageAlt&quot; placeholder=&quot;Alternate Text (optional)&quot; required&gt;
+  		&lt;/div&gt;
+  	&lt;/fieldset&gt;
+
+  	&lt;fieldset&gt;
+  		&lt;div class=&quot;row&quot;&gt;
+  			&lt;div class=&quot;col-xs-12 col-sm-12 col-md-12 col-lg-12&quot;&gt;
+  				&lt;div class=&quot;checkbox-inline&quot;&gt;
+  					&lt;label&gt;
+  						&lt;input type=&quot;checkbox&quot; ng-model=&quot;options.showLabels&quot;&gt;
+  						Show Labels ?
+  					&lt;/label&gt;
+  				&lt;/div&gt;
+
+  				&lt;div class=&quot;checkbox-inline&quot;&gt;
+  					&lt;label&gt;
+  						&lt;input type=&quot;checkbox&quot; ng-model=&quot;options.showCredits&quot;&gt;
+  						Show Credits ?
+  					&lt;/label&gt;
+  				&lt;/div&gt;
+  
+  				&lt;div class=&quot;checkbox-inline&quot;&gt;
+  					&lt;label&gt;
+  						&lt;input type=&quot;checkbox&quot; ng-model=&quot;options.animate&quot;&gt;
+  						Animate Slider ?
+  					&lt;/label&gt;
+  				&lt;/div&gt;
+
+  				&lt;div class=&quot;checkbox-inline&quot;&gt;
+  					&lt;label&gt;
+  						&lt;input type=&quot;checkbox&quot; ng-model=&quot;options.vertical&quot;&gt;
+  						Vertical Slider ?
+  					&lt;/label&gt;
+  				&lt;/div&gt;
+  			&lt;/div&gt;
+  		&lt;/div&gt;
+  	&lt;/fieldset&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+							  </pre>
+						  </div>
+						</tab>
+						<tab heading="JavaScript">
+						  <div plunker-content="javascript">
+							  <pre class="prettyprint">
+angular.module('ngJuxtaposeDemo').controller('HolyGrailCtrl', ['$scope', function ($scope) {
+  $scope.options = {};
+
+  $scope.options.startingPosition = '30%';
+  $scope.options.showLabels = true;
+  $scope.options.showCredits = true;
+  $scope.options.animate = true;
+  $scope.options.vertical = false;
+
+  $scope.options.beforeImageUrl = 'https://juxtapose.knightlab.com/static/img/Sochi_11April2005.jpg';
+  $scope.options.beforeImageLabel = 'April 2005';
+  $scope.options.beforeImageCredit = '';
+  $scope.options.beforeImageAlt = '2009 Alternate text';
+
+  $scope.options.afterImageUrl = 'https://juxtapose.knightlab.com/static/img/Sochi_22Nov2013.jpg';
+  $scope.options.afterImageLabel = 'Nov 2013';
+  $scope.options.afterImageCredit = '';
+  $scope.options.afterImageAlt = '';
+
+}]);
+
+							  </pre>
+						  </div>
+						</tab>
+					  </tabset>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="css_customization">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 page-header">
+						<h1>CSS Customization</h1>      
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<p>You can change how JuxtaposeJS appears in the browser by overriding the CSS rules. More information can be found <a href="https://github.com/NUKnightLab/juxtapose/wiki/Styling-JuxtaposeJS">here</a>
+						</p>					
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="PlunkerCtrl" 
+					ng-init="vendor_css=['https://rawgit.com/NUKnightLab/juxtapose/1.1.3/juxtapose/css/juxtapose.css'];
+					vendor_js=['https://rawgit.com/NUKnightLab/juxtapose/1.1.3/juxtapose/js/juxtapose.js', 'https://rawgit.com/tinesoft/ng-juxtapose/master/src/ng-juxtapose.js'];">
 						<div class="pull-right">
-							<button class="btn btn-info" ng-click="edit('1.0.7', 'ngBrowserUpdate', 'ng-browser-update')">
-							  	<i class="fa fa-eye"></i> See / 
-			                	<i class="fa fa-edit"></i> Edit in plunker
+							<button class="btn btn-info" ng-click="edit('1.2.28', 'ngJuxtapose', 'ng-juxtapose')">
+								<i class="fa fa-eye"></i> See / 
+								<i class="fa fa-edit"></i> Edit in plunker
 							</button>
 						</div>
 						<tabset>
 							<tab heading="Markup">
-			                  <div plunker-content="markup">
-			                      <pre class="prettyprint">
-&lt;browser-update always-show-bar="true"&gt;&lt;/browser-update&gt;
-			                      </pre>
-			                  </div>
-			                </tab>
-			                <tab heading="CSS" selected="true">
-			                  <div plunker-content="css">
-			                    <pre class="prettyprint">
-body .buorg {font-size:20px}
-
-body .buorg {
-    position:absolute;
-    width:100%;
-    top:0px;
-    left:0px;
-    border-bottom:1px solid #A29330;
-    background:#FDF2AB no-repeat 1em 0.55em url(http://browser-update.org/img/dialog-warning.gif);\
-    text-align:left;
-    cursor:pointer;
-    font-family: Arial,Helvetica,sans-serif; color:#000;
-    font-size: 12px;
+							  <div plunker-content="markup">
+								  <pre class="prettyprint">
+&lt;juxtapose
+	before-image-url="'http://online.wsj.com/media/LIONDOORA.jpg'" 
+	after-image-url="'http://online.wsj.com/media/LIONDOOR_2A.jpg'"&gt;
+&lt;/juxtapose&gt;
+								  </pre>
+							  </div>
+							</tab>
+							<tab heading="CSS" selected="true">
+							  <div plunker-content="css">
+								<pre class="prettyprint">
+div.juxtapose {
+	width: 100%;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
-body .buorg div {
-    padding:5px 36px 5px 40px;
+div.jx-slider {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
 }
 
-body .buorg a {
-    color:#E25600;
+div.jx-handle {
+	position: absolute;
+	height: 100%;
+	width: 40px;
+	cursor: col-resize;
+	z-index: 10;
+	margin-left: -20px;
 }
 
-#buorgclose {
-    position: absolute;
-    right: .5em;
-    top:.2em;
-    height: 20px;
-    width: 12px;
-    font-weight: bold;
-    font-size:14px;
-    padding:0;
+
+.vertical div.jx-handle {
+	height: 40px;
+	width: 100%;
+	cursor: row-resize;
+	margin-top: -20px;
+	margin-left: 0;
 }
-			                    </pre>
-			                  </div>
-			                </tab>
-			              </tabset>						
+
+div.jx-control {
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	width: 3px;
+	background-color: white;
+}
+
+.vertical div.jx-control {
+	height: 3px;
+	width: 100%;
+	background-color: white;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+div.jx-controller {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	height: 60px;
+	width: 9px;
+	margin-left: -3px;
+	background-color: white;
+}
+
+.vertical div.jx-controller {
+	height: 9px;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	top: -3px;
+	position: relative;
+}
+
+div.jx-arrow {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0; 
+	width: 0;
+	height: 0;
+	transition: all .2s ease;
+}
+
+.vertical div.jx-arrow {
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0; 
+	width: 0;
+	height: 0;
+	transition: all .2s ease;
+}
+
+
+div.jx-arrow.jx-left {
+	left: 2px;
+	border-style: solid;
+	border-width: 8px 8px 8px 0;
+	border-color: transparent #FFF transparent transparent;
+}
+
+div.jx-arrow.jx-right {
+	right: 2px;
+	border-style: solid;
+	border-width: 8px 0 8px 8px;
+	border-color: transparent transparent transparent #FFF;
+}
+
+.vertical div.jx-arrow.jx-left {
+	left: 0px;
+	top: 2px;
+	border-style: solid;
+	border-width: 0px 8px 8px 8px;
+	border-color: transparent transparent #FFF transparent;
+}
+
+.vertical div.jx-arrow.jx-right {
+	right: 0px;
+	top: initial;
+	bottom: 2px;
+	border-style: solid;
+	border-width: 8px 8px 0 8px;
+	border-color: #FFF transparent transparent transparent;
+}
+
+div.jx-handle:hover div.jx-arrow.jx-left,
+div.jx-handle:active div.jx-arrow.jx-left {
+	left: -1px;
+}
+
+div.jx-handle:hover div.jx-arrow.jx-right, 
+div.jx-handle:active div.jx-arrow.jx-right {
+	right: -1px;
+}
+
+.vertical div.jx-handle:hover div.jx-arrow.jx-left,
+.vertical div.jx-handle:active div.jx-arrow.jx-left {
+	left: 0px;
+	top: 0px;
+}
+
+.vertical div.jx-handle:hover div.jx-arrow.jx-right, 
+.vertical div.jx-handle:active div.jx-arrow.jx-right {
+	right: 0px;
+	bottom: 0px;
+}
+
+
+div.jx-image {
+	position: absolute;
+	height: 100%;
+	display: inline-block;
+	top: 0;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: scale(1);
+}
+
+.vertical div.jx-image {
+	width: 100%;
+	left: 0;
+	top: initial;
+}
+
+div.jx-image img {
+	height: 100%;
+	z-index: 5;
+	position: absolute;
+	max-height: initial;
+	max-width: initial;
+}
+
+.vertical div.jx-image img {
+	height: initial;
+	width: 100%;
+}
+
+div.jx-image.jx-left {
+	left: 0;
+	background-position: left;
+}
+
+div.jx-image.jx-left img {
+	left: 0;
+}
+
+div.jx-image.jx-right {
+	right: 0;
+	background-position: right;
+}
+
+div.jx-image.jx-right img {
+	right: 0;
+	bottom: 0;
+}
+
+
+.veritcal div.jx-image.jx-left {
+	top: 0;
+	background-position: top;
+}
+
+.veritcal div.jx-image.jx-left img {
+	top: 0;
+}
+
+.vertical div.jx-image.jx-right {
+	bottom: 0;
+	background-position: bottom;
+}
+
+.veritcal div.jx-image.jx-right img {
+	bottom: 0;
+}
+
+
+div.jx-image div.jx-label {
+	font-size: 1em;
+	padding: .25em .75em;
+	position: relative;
+	display: inline-block;
+	top: 0;
+	background-color: #000; /* IE 8 */
+	background-color: rgba(0,0,0,.7);
+	color: white;
+	z-index: 10;
+	white-space: nowrap;
+	line-height: 18px;
+	vertical-align: middle;
+}
+
+div.jx-image.jx-left div.jx-label {
+	float: left;
+	left: 0;
+}
+
+div.jx-image.jx-right div.jx-label {
+	float: right;
+	right: 0;
+}
+
+.vertical div.jx-image div.jx-label {
+	display: table;
+	position: absolute;
+}
+
+.vertical div.jx-image.jx-right div.jx-label {
+	left: 0;
+	bottom: 0;
+	top: initial;
+}
+
+div.jx-credit {
+	line-height: 1.1;
+	font-size: 0.75em;
+}
+
+div.jx-credit em {
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+/* Animation */
+
+div.jx-image.transition {
+	transition: width .5s ease;
+}
+
+div.jx-handle.transition {
+	transition: left .5s ease;
+}
+
+.vertical div.jx-image.transition {
+	transition: height .5s ease;
+}
+
+.vertical div.jx-handle.transition {
+	transition: top .5s ease;
+}
+
+/* Knight Lab Credit */
+a.jx-knightlab {
+	background-color: #000; /* IE 8 */
+	background-color: rgba(0,0,0,.25);
+	bottom: 0;
+	display: table;
+	height: 14px;
+	line-height: 14px;
+	padding: 1px 4px 1px 5px;
+	position: absolute;
+	right: 0;
+	text-decoration: none;
+	z-index: 10;
+}
+
+a.jx-knightlab div.knightlab-logo {
+	display: inline-block;
+	vertical-align: middle;
+	height: 8px;
+	width: 8px;
+	background-color: #c34528;
+	transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	top: -1.25px;
+	position: relative;
+	cursor: pointer;
+}
+
+a.jx-knightlab:hover {
+	background-color: #000; /* IE 8 */
+	background-color: rgba(0,0,0,.35);
+}
+a.jx-knightlab:hover div.knightlab-logo {
+	background-color: #ce4d28;
+}
+
+a.jx-knightlab span.juxtapose-name {
+	display: table-cell;
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	color: white;
+	font-size: 10px;
+	padding-left: 0.375em;
+	vertical-align: middle;
+	line-height: normal;
+}
+
+/* keyboard accessibility */
+div.jx-controller:focus,
+div.jx-image.jx-left div.jx-label:focus,
+div.jx-image.jx-right div.jx-label:focus,
+a.jx-knightlab:focus {
+	background: #eae34a;
+	color: #000;
+}
+a.jx-knightlab:focus span.juxtapose-name{
+	color: #000;
+	border: none;
+}
+								</pre>
+							  </div>
+							</tab>
+						  </tabset>						
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<footer class="footer" role="footer" >
-            <div class="container">
-              <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <ul class="links">
-                      <li><a href="https://github.com/tinesoft/ng-browser-update/blob/master/LICENSE " target="_blank">MIT License</a></li>
-                      <li><a href="https://github.com/tinesoft/ng-browser-update/issues?state=open"    target="_blank">Open Issues</a></li>
-                  </ul> 
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                  <p class="designed-and-coded">Designed and Coded with <i class="fa fa-heart heart"></i> by <a href="https://www.linkedin.com/in/kondotine/en" target="_blank">Tine Kondo</a></p>                  
-                </div>
-              </div>
-            </div>
-        </footer>
+			<div class="container">
+			  <div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<ul class="links">
+					  <li><a href="https://github.com/tinesoft/ng-juxtapose/blob/master/LICENSE " target="_blank">MIT License</a></li>
+					  <li><a href="https://github.com/tinesoft/ng-juxtapose/issues?state=open"    target="_blank">Open Issues</a></li>
+				  </ul> 
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				  <p class="designed-and-coded">Designed and Coded with <i class="fa fa-heart heart"></i> by <a href="https://www.linkedin.com/in/kondotine/en" target="_blank">Tine Kondo</a></p>                  
+				</div>
+			  </div>
+			</div>
+		</footer>
 	</body>
 </html>
