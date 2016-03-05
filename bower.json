@@ -47,9 +47,9 @@
     "juxtapose": "~1.1"
   },
   "devDependencies": {
-    "bootstrap": "~3.3",
+    "bootstrap": "~3.3.6",
     "angular-mocks": ">=1.2",
-    "angular-bootstrap": "~0.13",
+    "angular-bootstrap": "~1.2.2",
     "google-code-prettify": "~1.0.3",
     "jasmine-jquery": "~2.1.0"
   }
