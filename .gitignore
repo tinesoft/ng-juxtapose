@@ -3,7 +3,7 @@
 *.bat
 *.sh
 *.out.txt
-/dist
+/dist/demo
 /build
 /node_modules
 /bower_components
