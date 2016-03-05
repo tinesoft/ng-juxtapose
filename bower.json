@@ -21,9 +21,7 @@
     "after"
   ],
   "main": [
-    "dist/ng-juxtapose.js",
-    "dist/ng-juxtapose.min.js",
-    "dist/ng-juxtapose.min.js.map"
+    "dist/ng-juxtapose.js"
   ],
   "ignore": [
     "src",
@@ -38,9 +36,7 @@
     "changelog.tpl",
     "package.json",
     "module.prefix",
-    "module.suffix",
-    "LICENSE",
-    "README.md"
+    "module.suffix"
   ],
   "dependencies": {
     "angular": ">=1.2",
