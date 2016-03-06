@@ -42,6 +42,8 @@
     "grunt-build-control": "latest",
     "karma": "latest",
     "karma-jasmine": "latest",
-    "karma-phantomjs-launcher": "latest"
+    "karma-phantomjs-launcher": "latest",
+    "jasmine-core": "latest",
+    "phantomjs-prebuilt": "latest"
   }
 }

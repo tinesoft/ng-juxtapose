@@ -46,7 +46,7 @@
     "bootstrap": "~3.3.6",
     "angular-mocks": ">=1.2",
     "angular-bootstrap": "~1.2.2",
-    "google-code-prettify": "~1.0.3",
+    "google-code-prettify": "~1.0.4",
     "jasmine-jquery": "~2.1.0"
   }
 }

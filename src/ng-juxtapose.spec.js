@@ -135,7 +135,7 @@ describe('Directive: juxtapose', function () {
 
 		expect($jxHandle).toHaveClass('jx-handle');
 		expect($jxHandle.eq(0)[0].tagName).toBe('DIV');
-		expect($jxHandle.attr('style')).toEqual(vertical ? 'top: 50%; ' : 'left: 50%; ');
+		expect($jxHandle.attr('style')).toEqual(vertical ? 'top: 50%;' : 'left: 50%;');
 		//FIXME TKO: not working: expect($jxHandle).toHaveCss(vertical ? {top: "50%"} : {left: "50%"});
 
 		var $jxArrowLeft = $jxHandle.children().eq(0);
@@ -169,7 +169,7 @@ describe('Directive: juxtapose', function () {
 
 		expect($jxImage).toHaveClass('jx-image jx-'+position);
 		expect($jxImage.eq(0)[0].tagName).toBe('DIV');
-		expect($jxImage.attr('style')).toEqual(vertical ? 'height: 50%; ': 'width: 50%; ');
+		expect($jxImage.attr('style')).toEqual(vertical ? 'height: 50%;': 'width: 50%;');
 		//FIXME TKO: not working: expect($jxImage).toHaveCss(vertical ? {height: "50%"} : {width: "50%"});
 
 		var $img = $jxImage.children().eq(0);
