@@ -66,13 +66,13 @@
 					<p>AngularJS directive for <a href="https://juxtapose.knightlab.com/">JuxtaposeJS</a>, a JavaScript library for making before/after image sliders.
 					</p>
 					<p>
-						<a class="btn btn-outline-inverse btn-lg" href="https://juxtapose.knightlab.com/">
+						<a class="btn btn-outline-inverse btn-lg" href="https://juxtapose.knightlab.com/" target="_blank">
 							<i class="fa fa-info fa-lg"></i> Learn More
 						</a>
-						<a class="btn btn-outline-inverse btn-lg" href="https://github.com/tinesoft/ng-juxtapose">
+						<a class="btn btn-outline-inverse btn-lg" href="https://github.com/tinesoft/ng-juxtapose"  target="_blank">
 							<i class="fa fa-github fa-lg"></i> Code on Github
 						</a>
-						<a class="btn btn-outline-inverse btn-lg" href="https://github.com/tinesoft/ng-juxtapose/releases/tag/v1.0.2">
+						<a class="btn btn-outline-inverse btn-lg" href="https://github.com/tinesoft/ng-juxtapose/releases/tag/v1.0.2"  target="_blank">
 							<i class="fa fa-download fa-lg"></i> Download <small>(1.0.2)</small>
 						</a>
 					</p>
@@ -83,11 +83,11 @@
 		<section id="minimal_code" >
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 page-header">
+					<div class="col-xs-12 col-sm-12 col-md-12 page-header">
 						<h1>Minimal code</h1>        
 					</div>
 
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
+					<div class="col-xs-12 col-sm-6 col-md-6 pull-left">
 						<p>Simplest usage possible! Just add the directive in your html page.</p>
 
 						<juxtapose
@@ -95,7 +95,7 @@
 							after-image-url="'assets/LIONDOOR_2A.jpg'">
 						</juxtapose>
 					</div>
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right" ng-controller="PlunkerCtrl"
+					<div class="col-xs-12 col-sm-6 col-md-6 pull-right" ng-controller="PlunkerCtrl"
 						ng-init="vendor_css=['https://rawgit.com/NUKnightLab/juxtapose/1.1.3/juxtapose/css/juxtapose.css'];
 						vendor_js=['https://rawgit.com/NUKnightLab/juxtapose/1.1.3/juxtapose/js/juxtapose.js', 'https://rawgit.com/tinesoft/ng-juxtapose/master/src/ng-juxtapose.js'];" >
 					 
@@ -105,8 +105,8 @@
 							<i class="fa fa-edit"></i> Edit in plunker
 						</button>
 					  </div>
-					  <tabset>
-						<tab heading="Markup">
+					  <uib-tabset>
+						<uib-tab heading="Markup">
 						  <div plunker-content="markup">
 							  <pre class="prettyprint">
 &lt;juxtapose
@@ -115,11 +115,11 @@
 &lt;/juxtapose&gt;
 							  </pre>
 						  </div>
-						</tab>
-					  </tabset>
+						</uib-tab>
+					  </uib-tabset>
 					</div>
 
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 callout callout-info">
+					<div class="col-xs-12 col-sm-12 col-md-12 callout callout-info">
 						The <b>before image</b> refers to the image on the left (resp. on top) in case of <b>vertical</b> (resp. <b>horizontal</b>) orientation.
 						<br/>
 						The <b>after image</b> refers to the image on the right (resp. at the bottom) in case of <b>vertical</b> (resp. <b>horizontal</b>) orientation.
@@ -131,10 +131,10 @@
 		<section id="with_attrs_options">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 page-header">
+					<div class="col-xs-12 col-sm-12 col-md-12 page-header">
 						<h1>With Options</h1>        
 					</div>
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
+					<div class="col-xs-12 col-sm-6 col-md-6 pull-left">
 						<p>A little more complete usage, with some options given via <b>hardcoded values</b>.</p>
 
 						<juxtapose 
@@ -147,7 +147,7 @@
 						  after-image-credit="">
 						</juxtapose>
 					</div>
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right" ng-controller="PlunkerCtrl"
+					<div class="col-xs-12 col-sm-6 col-md-6 pull-right" ng-controller="PlunkerCtrl"
 					ng-init="vendor_css=['https://rawgit.com/NUKnightLab/juxtapose/1.1.3/juxtapose/css/juxtapose.css'];
 					vendor_js=['https://rawgit.com/NUKnightLab/juxtapose/1.1.3/juxtapose/js/juxtapose.js','https://rawgit.com/tinesoft/ng-juxtapose/master/src/ng-juxtapose.js'];">
 					 
@@ -157,8 +157,8 @@
 							<i class="fa fa-edit"></i> Edit in plunker
 						</button>
 					  </div>
-					  <tabset>
-						<tab heading="Markup">
+					  <uib-tabset>
+						<uib-tab heading="Markup">
 						  <div plunker-content="markup">
 							  <pre class="prettyprint">
 &lt;juxtapose 
@@ -172,11 +172,11 @@
 &lt;/juxtapose&gt;
 							  </pre>
 						  </div>
-						</tab>
-					  </tabset>
+						</uib-tab>
+					  </uib-tabset>
 					</div>
 
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 callout callout-info">
+					<div class="col-xs-12 col-sm-12 col-md-12 callout callout-info">
 						<p>The following options are available <b>on the directive element</b>, and directly affect the two images:</p>
 						<ul>
 							<li><b>before-image-url</b> : the URL to the before image</li>
@@ -192,7 +192,7 @@
 						</ul>
 					</div>
 
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 callout callout-info">
+					<div class="col-xs-12 col-sm-12 col-md-12 callout callout-info">
 						<p>The following options are available <b>on both the directive element and as config parameters</b> (see <a href="https://github.com/tinesoft/ng-juxtapose#config-options">juxtaposeConfigProvider</a>), and globally affect the slider itself:</p>
 						<ul>
 							<li><b>starting-position</b> : the slider start position (default is <code>50%</code>, at the middle of the two images)</li>
@@ -203,7 +203,7 @@
 						</ul>
 					</div>
 
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 callout callout-warning">
+					<div class="col-xs-12 col-sm-12 col-md-12 callout callout-warning">
 						<p>When config options are defined as attributes, they <strong>take precedence over values defined via the <a href="https://github.com/tinesoft/ng-juxtapose#config-options">juxtaposeConfigProvider</a></strong></p>
 					</div>
 				</div>
@@ -214,7 +214,7 @@
 			<div class="container">
 				<div class="row">
 		
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left" ng-controller="MyCtrl">
+					<div class="col-xs-12 col-sm-6 col-md-6 pull-left" ng-controller="MyCtrl">
 						<p>Another usage, with some options given via <b>scope values</b>.</p>
 
 						<juxtapose
@@ -229,7 +229,7 @@
 							after-image-alt="options.afterImageAlt">
 						</juxtapose>
 					</div>
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right" ng-controller="PlunkerCtrl"
+					<div class="col-xs-12 col-sm-6 col-md-6 pull-right" ng-controller="PlunkerCtrl"
 					ng-init="vendor_css=['https://rawgit.com/NUKnightLab/juxtapose/1.1.3/juxtapose/css/juxtapose.css'];
 					vendor_js=['https://rawgit.com/NUKnightLab/juxtapose/1.1.3/juxtapose/js/juxtapose.js', 'https://rawgit.com/tinesoft/ng-juxtapose/master/src/ng-juxtapose.js'];" >
 					 
@@ -239,8 +239,8 @@
 							<i class="fa fa-edit"></i> Edit in plunker
 						</button>
 					  </div>
-					  <tabset>
-						<tab heading="Markup">
+					  <uib-tabset>
+						<uib-tab heading="Markup">
 						  <div plunker-content="markup">
 							  <pre class="prettyprint">
 &lt;div ng-controller="MyCtrl"&gt;
@@ -258,8 +258,8 @@
 &lt;/div&gt;
 							  </pre>
 						  </div>
-						</tab>
-						<tab heading="JavaScript">
+						</uib-tab>
+						<uib-tab heading="JavaScript">
 						  <div plunker-content="javascript">
 							  <pre class="prettyprint">
 angular.module('ngJuxtaposeDemo').controller('MyCtrl', ['$scope',  function ($scope) {
@@ -277,8 +277,8 @@ angular.module('ngJuxtaposeDemo').controller('MyCtrl', ['$scope',  function ($sc
 }]);
 							  </pre>
 						  </div>
-						</tab>
-					  </tabset>
+						</uib-tab>
+					  </uib-tabset>
 					</div>
 				</div>
 			</div>
@@ -287,13 +287,13 @@ angular.module('ngJuxtaposeDemo').controller('MyCtrl', ['$scope',  function ($sc
 		<section id="holy_grail">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 page-header">
+					<div class="col-xs-12 col-sm-12 col-md-12 page-header">
 						<h1>Holy Grail Demo</h1>      
 					</div>
 
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="HolyGrailCtrl">
 						<div class="row">
-							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
+							<div class="col-xs-12 col-sm-6 col-md-6 pull-left">
 								<juxtapose
 									starting-position="options.startingPosition"
 									show-labels="options.showLabels"
@@ -312,7 +312,7 @@ angular.module('ngJuxtaposeDemo').controller('MyCtrl', ['$scope',  function ($sc
 									after-image-alt="options.afterImageAlt">
 								</juxtapose>								
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right">
+							<div class="col-xs-12 col-sm-6 col-md-6 pull-right">
 								<form  name="optionsForm" role="form" class="form-horizontal" novalidate>
 									<fieldset>
 										<div class="form-group">
@@ -325,10 +325,10 @@ angular.module('ngJuxtaposeDemo').controller('MyCtrl', ['$scope',  function ($sc
 									
 										<div class="form-group">
 											<div class="row">
-												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+												<div class="col-xs-12 col-sm-6 col-md-6">
 													<input type="text" class="form-control" ng-model="options.beforeImageLabel" placeholder="Label (optional)">
 												</div>
-												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+												<div class="col-xs-12 col-sm-6 col-md-6">
 													<input type="text" class="form-control" ng-model="options.beforeImageCredit" placeholder="Credit (optional)">
 												</div>
 											</div>
@@ -350,10 +350,10 @@ angular.module('ngJuxtaposeDemo').controller('MyCtrl', ['$scope',  function ($sc
 									
 										<div class="form-group">
 											<div class="row">
-												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+												<div class="col-xs-12 col-sm-6 col-md-6">
 													<input type="text" class="form-control" ng-model="options.afterImageLabel" placeholder="Label (optional)">
 												</div>
-												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+												<div class="col-xs-12 col-sm-6 col-md-6">
 													<input type="text" class="form-control" ng-model="options.afterImageCredit" placeholder="Credit (optional)">
 												</div>
 											</div>
@@ -412,8 +412,8 @@ angular.module('ngJuxtaposeDemo').controller('MyCtrl', ['$scope',  function ($sc
 							<i class="fa fa-edit"></i> Edit in plunker
 						</button>
 					  </div>
-					  <tabset>
-						<tab heading="Markup">
+					  <uib-tabset>
+						<uib-tab heading="Markup">
 						  <div plunker-content="markup">
 							  <pre class="prettyprint">
 &lt;div  ng-controller="HolyGrailCtrl"&gt;
@@ -449,10 +449,10 @@ angular.module('ngJuxtaposeDemo').controller('MyCtrl', ['$scope',  function ($sc
   	
   		&lt;div class=&quot;form-group&quot;&gt;
   			&lt;div class=&quot;row&quot;&gt;
-  				&lt;div class=&quot;col-xs-12 col-sm-6 col-md-6 col-lg-6&quot;&gt;
+  				&lt;div class=&quot;col-xs-12 col-sm-6 col-md-6&quot;&gt;
   					&lt;input type=&quot;text&quot; class=&quot;form-control&quot; ng-model=&quot;options.beforeImageLabel&quot; placeholder=&quot;Label (optional)&quot;&gt;
   				&lt;/div&gt;
-  				&lt;div class=&quot;col-xs-12 col-sm-6 col-md-6 col-lg-6&quot;&gt;
+  				&lt;div class=&quot;col-xs-12 col-sm-6 col-md-6&quot;&gt;
   					&lt;input type=&quot;text&quot; class=&quot;form-control&quot; ng-model=&quot;options.beforeImageCredit&quot; placeholder=&quot;Credit (optional)&quot;&gt;
   				&lt;/div&gt;
   			&lt;/div&gt;
@@ -474,10 +474,10 @@ angular.module('ngJuxtaposeDemo').controller('MyCtrl', ['$scope',  function ($sc
   	
   		&lt;div class=&quot;form-group&quot;&gt;
   			&lt;div class=&quot;row&quot;&gt;
-  				&lt;div class=&quot;col-xs-12 col-sm-6 col-md-6 col-lg-6&quot;&gt;
+  				&lt;div class=&quot;col-xs-12 col-sm-6 col-md-6&quot;&gt;
   					&lt;input type=&quot;text&quot; class=&quot;form-control&quot; ng-model=&quot;options.afterImageLabel&quot; placeholder=&quot;Label (optional)&quot;&gt;
   				&lt;/div&gt;
-  				&lt;div class=&quot;col-xs-12 col-sm-6 col-md-6 col-lg-6&quot;&gt;
+  				&lt;div class=&quot;col-xs-12 col-sm-6 col-md-6&quot;&gt;
   					&lt;input type=&quot;text&quot; class=&quot;form-control&quot; ng-model=&quot;options.afterImageCredit&quot; placeholder=&quot;Credit (optional)&quot;&gt;
   				&lt;/div&gt;
   			&lt;/div&gt;
@@ -525,8 +525,8 @@ angular.module('ngJuxtaposeDemo').controller('MyCtrl', ['$scope',  function ($sc
 &lt;/div&gt;
 							  </pre>
 						  </div>
-						</tab>
-						<tab heading="JavaScript">
+						</uib-tab>
+						<uib-tab heading="JavaScript">
 						  <div plunker-content="javascript">
 							  <pre class="prettyprint">
 angular.module('ngJuxtaposeDemo').controller('HolyGrailCtrl', ['$scope', function ($scope) {
@@ -552,8 +552,8 @@ angular.module('ngJuxtaposeDemo').controller('HolyGrailCtrl', ['$scope', functio
 
 							  </pre>
 						  </div>
-						</tab>
-					  </tabset>
+						</uib-tab>
+					  </uib-tabset>
 					</div>
 				</div>
 			</div>
@@ -562,7 +562,7 @@ angular.module('ngJuxtaposeDemo').controller('HolyGrailCtrl', ['$scope', functio
 		<section id="css_customization">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 page-header">
+					<div class="col-xs-12 col-sm-12 col-md-12 page-header">
 						<h1>CSS Customization</h1>      
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -578,8 +578,8 @@ angular.module('ngJuxtaposeDemo').controller('HolyGrailCtrl', ['$scope', functio
 								<i class="fa fa-edit"></i> Edit in plunker
 							</button>
 						</div>
-						<tabset>
-							<tab heading="Markup">
+						<uib-tabset>
+							<uib-tab heading="Markup">
 							  <div plunker-content="markup">
 								  <pre class="prettyprint">
 &lt;juxtapose
@@ -588,8 +588,8 @@ angular.module('ngJuxtaposeDemo').controller('HolyGrailCtrl', ['$scope', functio
 &lt;/juxtapose&gt;
 								  </pre>
 							  </div>
-							</tab>
-							<tab heading="CSS" selected="true">
+							</uib-tab>
+							<uib-tab heading="CSS" selected="true">
 							  <div plunker-content="css">
 								<pre class="prettyprint">
 div.juxtapose {
@@ -932,8 +932,8 @@ a.jx-knightlab:focus span.juxtapose-name{
 }
 								</pre>
 							  </div>
-							</tab>
-						  </tabset>						
+							</uib-tab>
+						  </uib-tabset>						
 					</div>
 				</div>
 			</div>
@@ -942,13 +942,13 @@ a.jx-knightlab:focus span.juxtapose-name{
 		<footer class="footer" role="footer" >
 			<div class="container">
 			  <div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="col-xs-12 col-sm-6 col-md-6">
 					<ul class="links">
 					  <li><a href="https://github.com/tinesoft/ng-juxtapose/blob/master/LICENSE " target="_blank">MIT License</a></li>
 					  <li><a href="https://github.com/tinesoft/ng-juxtapose/issues?state=open"    target="_blank">Open Issues</a></li>
 				  </ul> 
 				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="col-xs-12 col-sm-6 col-md-6">
 				  <p class="designed-and-coded">Designed and Coded with <i class="fa fa-heart heart"></i> by <a href="https://www.linkedin.com/in/kondotine/en" target="_blank">Tine Kondo</a></p>                  
 				</div>
 			  </div>
